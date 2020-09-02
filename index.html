@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <head>
+    <script src="jquery.js"></script>
     <link rel="stylesheet" href="style.css">
-<body>
-    <div class="button" onclick="closeTab()">Klik her</div>
+<body onload="start()">
+    <div class="button" onclick="closeTab()">
+        Klik her
+    </div>
+    <script src="javaScript.js"></script>
     <h1>
        Velkommen til min side 
     </h1>
-    <script src="javaScript.js">
-    </script>
+    <input id="text" type="text" value="">
+    <div class="button" onclick="getTempFromCity()">Klik</div>
+    <p id="demo">
+        nice
+    </p>
 </body>
 </head>
