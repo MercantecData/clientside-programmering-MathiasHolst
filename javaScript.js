@@ -13,13 +13,23 @@ function closeTab(){
     window.close()
 }
 
-function getTempFromCity(){
+function getTempFromCity1(){
     var str = document.getElementById("text").value
     var url = `https://api.openweathermap.org/data/2.5/weather?q=${str}&appid=41bfac970ccb62f946ceb789cef8bb08&units=metric` 
-    //document.getElementById("demo").innerHTML = "Denne by kunne ikke findes"
-    $("#demo").text("Denne by kunne ikke findes")
+    //$("#demo").text("Denne by kunne ikke findes")
     var promise = fetch(url)
     var promise2 = promise.then(v=>v.json())
-    promise2.then(v=>document.getElementById("demo").innerHTML = (`${v.main.temp} Grader i ${v.name} men det foeles som ${v.main.feels_like}`))
-    
+    promise2.then(v=>document.getElementById("content1").innerHTML = (`${v.main.temp} Grader i ${v.name} men det foeles som ${v.main.feels_like}`))   
 }
+
+function getTempFromCity2(){
+    var str = document.getElementById("text2").value
+    var url = `https://api.openweathermap.org/data/2.5/weather?q=${str}&appid=41bfac970ccb62f946ceb789cef8bb08&units=metric` 
+    //$("#demo").text("Denne by kunne ikke findes")
+    var promise = fetch(url)
+    var promise2 = promise.then(v=>v.json())
+    promise2.then(v=>document.getElementById("content2").innerHTML = (`${v.main.temp} Grader i ${v.name} men det foeles som ${v.main.feels_like}`))   
+}
+
+setInterval(getTempFromCity1, 60000);
+setInterval(getTempFromCity2, 60000);
