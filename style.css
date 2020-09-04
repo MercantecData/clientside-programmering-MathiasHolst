@@ -21,3 +21,9 @@ h1{
 .button:active{
     background: grey;
 }
+
+#arrow1{
+    max-width: 50px;
+    max-height: 100px;
+    display: block;
+}
