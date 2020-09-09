@@ -8,8 +8,9 @@ function callCity(name, funFact, picAddress){
     promise2.then(v=>document.getElementById("weather").innerHTML = (`${v.main.temp} Grader i ${v.name} lige nu`))
 }
 
-function callPersonOrGame(name, funFact, picAddress){
+function callPersonOrGame(name, funFact, picAddress, linkToWebsite){
     document.getElementById("overskrift").innerHTML = (`${name}`)
     document.getElementById("beskrivelse").innerHTML = (`${funFact}`)
     document.getElementById("billede1").src=picAddress
+    document.getElementById("website").href = linkToWebsite
 }
