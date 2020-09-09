@@ -6,14 +6,33 @@
         <button class="dropButton">Byer</button>
         <div class="dropdownContent">
             <a href="#" onclick="callDubaiCity()">Dubai</a>
-            <a href="#" onclick="callTorontoCity()">Toronto</a>
-            <a href="#" onclick="callNewYorkCity()">New York</a>
+            <a href="#" onclick="callTorontoCity(), getTempFromCity(toronto)">Toronto</a>
+            <a href="#" onclick="callNewYorkCity(), getTempFromCity(utica)">New York</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropButton">Mennesker</button>
+        <div class="dropdownContent">
+            <a href="#" onclick="callElonMusk()">Elon Musk</a>
+            <a href="#" onclick="callJeffBezos()">Jeff bezos</a>
+            <a href="#" onclick="callBillGates()">Bill Gates</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropButton">Spil</button>
+        <div class="dropdownContent">
+            <a href="#" onclick="">Minecraft</a>
+            <a href="#" onclick="">Warcraft III</a>
+            <a href="#" onclick="">Pac-man</a>
         </div>
     </div>
 
     <div class="skabelon">
         <h1 id="overskrift"></h1>
         <p id="beskrivelse"></p>
+        <p id="weather"></p>
         <img id="billede1" href="">
     </div>
 </body>
