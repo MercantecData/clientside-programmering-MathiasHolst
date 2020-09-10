@@ -13,4 +13,5 @@ function callPersonOrGame(name, funFact, picAddress, linkToWebsite){
     document.getElementById("beskrivelse").innerHTML = (`${funFact}`)
     document.getElementById("billede1").src=picAddress
     document.getElementById("website").href = linkToWebsite
+    document.getElementById("weather").innerHTML = (``)
 }
